@@ -1,11 +1,11 @@
-# Micro Springboot project on Spring API (GET POST PUT DELETE requests with in memory DB)
-1. Spring API with basic HTTP GET POST PUT DELETE Restful methods
-   a. Start the Micro application from Eclipse by running SpringBoot application
-   b. Start the Micro application from the command line, java version must be later than 1.8
-      java -jar spring-boot-api-miro-service-0.0.1-SNAPSHOT.jar
-   c. From RESTful API client send HTTP requets with JSON onbject to test Spring API application
-   d. Download Postman 
-      Test API from url http://localhost:8080/api/v1/person
-   
-2. Spring Security OpenID Connect/ OAuth2.0
-3. JWT token
+# Micro Spring API project with SpringBoot application (GET POST PUT DELETE requests with in memory DB) <br>
+1. Spring API with basic HTTP GET POST PUT DELETE Restful methods <br>
+   a. Start the Micro application from Eclipse by running SpringBoot application <br>
+   b. Start the Micro application from the command line, java version must be later than 1.8 <br>
+      java -jar spring-boot-api-miro-service-0.0.1-SNAPSHOT.jar <br>
+   c. From RESTful API client send HTTP requets with JSON onbject to test Spring API application <br>
+   d. Download Postman <br>
+      Test API from url http://localhost:8080/api/v1/person <br>
+<br>
+2. Spring Security OpenID Connect/ OAuth2.0 <br>
+3. JWT token <br>
