@@ -1,5 +1,5 @@
 # Micro Spring API project with Restful APIs on methods (GET POST PUT DELETE requests) with in-memory DB <br><br>
-1. Spring API with basic HTTP GET POST PUT DELETE Restful methods <br>
+1. Spring API with basic HTTP GET POST PUT DELETE Restful methods <br><br>
    a. Start the Micro application from Eclipse by running SpringBoot application <br>
    b. Start the Micro application from the command line, java version must be later than 1.8 <br>
       java -jar spring-boot-api-miro-service-0.0.1-SNAPSHOT.jar <br>
