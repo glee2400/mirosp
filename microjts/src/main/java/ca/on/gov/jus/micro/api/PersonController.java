@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.UUID;
 
 import javax.validation.Valid;
-import javax.validation.constraints.NotNull;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
