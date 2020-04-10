@@ -17,11 +17,11 @@ public class PersonService {
 	
 	
 	/** ------ DataSource ------
-	 * Static DB : fakeDao
-	 * POSTGRES  : postgres
+	 * Static DB : Qualifier "fakeDao"
+	 * POSTGRES  : Qualifier "postgres"
 	 */
 	@Autowired
-	public PersonService(@Qualifier("postgres") PersonDao personDao) {
+	public PersonService(@Qualifier("fakeDao") PersonDao personDao) {
 		super();
 		this.personDao = personDao;
 	}

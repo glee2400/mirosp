@@ -1,4 +1,4 @@
-package ca.on.gov.jus.micro.dao;
+package ca.on.gov.jus.micro.model;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;

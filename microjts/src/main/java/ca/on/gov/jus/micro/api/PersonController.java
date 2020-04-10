@@ -32,7 +32,7 @@ public class PersonController {
 	}
 	
 	@PostMapping
-	public void addperson(@Valid @NonNull @RequestBody Person person) {
+	public void addPerson(@Valid @NonNull @RequestBody Person person) {
 		personService.addPerson(person);
 	}
 	

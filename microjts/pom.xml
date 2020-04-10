@@ -9,8 +9,8 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ca.on.gov.jus.micro</groupId>
-	<artifactId>spring-boot-api-miro-service</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<artifactId>jts-api-micro-service</artifactId>
+	<version>0.0.1</version>
 	<name>microjts</name>
 	<description>Miro microservice project for Spring Boot</description>
 
@@ -23,20 +23,18 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<!-- Restful service client call -->
+        <dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-webflux</artifactId>
+		</dependency>
+		
 		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
 		<dependency>
 		    <groupId>io.springfox</groupId>
 		    <artifactId>springfox-swagger2</artifactId>
 		    <version>2.9.2</version>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-spring-web -->
-		<dependency>
-		    <groupId>io.springfox</groupId>
-		    <artifactId>springfox-spring-web</artifactId>
-		    <version>2.9.2</version>
-		</dependency>
-
 		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
 		<dependency>
 		    <groupId>io.springfox</groupId>
@@ -49,6 +47,38 @@
 			<artifactId>spring-boot-starter-data-rest</artifactId>
 		</dependency -->
 		
+		<!-- https://mvnrepository.com/artifact/org.springframework.restdocs/spring-restdocs-mockmvc -->
+		<dependency>
+		    <groupId>org.springframework.restdocs</groupId>
+		    <artifactId>spring-restdocs-mockmvc</artifactId>
+		    <version>2.0.4.RELEASE</version>
+		    <scope>test</scope>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.junit.platform/junit-platform-engine -->
+		<dependency>
+		    <groupId>org.junit.platform</groupId>
+		    <artifactId>junit-platform-engine</artifactId>
+		    <version>1.6.1</version>
+		    <scope>test</scope>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter-api</artifactId>
+		    <version>5.6.1</version>
+		    <scope>test</scope>
+		</dependency>
+        <!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-engine -->
+		<dependency>
+		    <groupId>org.junit.jupiter</groupId>
+		    <artifactId>junit-jupiter-engine</artifactId>
+		    <version>5.6.1</version>
+		    <scope>test</scope>
+		</dependency>
+        
+        
+		<!-- For future purpose -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web-services</artifactId>
