@@ -21,6 +21,15 @@
    a. Generate Doc under http://localhost:8080/api/ folder <br>
    b. Only generate base package under ca.on.gov <br>
 
-#### 3. Spring Security OpenID Connect/ OAuth2.0 <br><br>
+#### 3. Micro-service communication via RestTemplate synchronized call <br>
+   a. RestTemplate remote Rest API synchronized call <br>
+   b. API Service discovery - Eureka server <br>
+    - eureka server started at http://localhost:8761/
+    - jaxb dependemcies(4) must be added manually
+    - applicaiton.property need to be updated to start Eureka server properly
+    - 
+    - Netflix OSS -- leaders in micro-service adn springboot , such as Eureka, Ribbon, Hysterix, Zuul
 
-#### 4. JWT token <br><br>
+#### 4. Spring Security OpenID Connect/ OAuth2.0 <br><br>
+
+#### 5. JWT token <br><br>

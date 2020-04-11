@@ -27,7 +27,7 @@ public class MovieCatalogResource {
 	@RequestMapping("/{userId}")
 	public List<CatalogItem> getCatalog(@PathVariable("userId") String userId){
 		
-		UserRating ratings = restTemplate.getForObject("http://localhost:8080/ratingsdata/users/"+userId, UserRating.class);
+		UserRating ratings = restTemplate.getForObject("http://micro-jts-api-service/ratingsdata/users/"+userId, UserRating.class);
 		
 //		--- Version 1 ---
 //		return Collections.singletonList(new CatalogItem("Transformers","test",4));
@@ -36,7 +36,7 @@ public class MovieCatalogResource {
                 .map(rating -> {
                     
                 	//For each movies ID, call movie info service and get details
-                	Movie movie = restTemplate.getForObject("http://localhost:8082/movies/" + rating.getMovieId(), Movie.class);
+                	Movie movie = restTemplate.getForObject("http://micro-case-api-service/movies/" + rating.getMovieId(), Movie.class);
                 	
                 	//
                 	//-- User WebClient Builder anotehr way to invoke remove Micro-services --
