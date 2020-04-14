@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ca.on.gov.jus.micro</groupId>
-	<artifactId>jts-api-miro-case</artifactId>
+	<artifactId>jts-api-micro-case</artifactId>
 	<version>0.0.1</version>
 	<name>microcase</name>
 	<description>Miro microcase microservice project with Spring Boot</description>

@@ -4,9 +4,11 @@ import java.util.Collections;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.context.annotation.Bean;
+import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.reactive.function.client.WebClient;
 
@@ -28,14 +30,22 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @EnableSwagger2
 @EnableEurekaClient
+@EnableCircuitBreaker
 public class MicrojtsApplication {
 	
-	/*Inject a Bean and only initiate it once. as long as it is in the class path*/
+	/*
+	 * Inject a Bean and only initiate it once. as long as it is in the class path
+	 * Add timeout parameter for the connections
+	 * Enable Eureka client to the default Eureka server 
+	 */
 	@Bean
 	@LoadBalanced
 	public RestTemplate getRestTemplate() {
-		return new RestTemplate();
+		HttpComponentsClientHttpRequestFactory clientHttpRequestFactory = new HttpComponentsClientHttpRequestFactory();
+		clientHttpRequestFactory.setConnectTimeout(3000);
+		return new RestTemplate(clientHttpRequestFactory);
 	}
+	
 	@Bean
 	public WebClient.Builder getWebClientBuilder(){
 		return WebClient.builder();

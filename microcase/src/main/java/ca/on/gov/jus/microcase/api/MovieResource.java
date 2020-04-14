@@ -12,6 +12,6 @@ public class MovieResource {
 
 	@RequestMapping ("/{movieId}")
 	public Movie getMovieInfo(@PathVariable("movieId") String movieId) {
-		return new Movie(movieId, "Service -- 8082 {Input movies/moviesId} -- Actual Movie "+movieId);
+		return new Movie(movieId, "Service -- 8082 {movies/moviesId} -- Actual Movie "+movieId);
 	}
 }

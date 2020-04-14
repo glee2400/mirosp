@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>ca.on.gov.jus.micro</groupId>
-	<artifactId>jts-api-miro-discovery-server</artifactId>
+	<artifactId>jts-api-micro-discovery-server</artifactId>
 	<version>0.0.1</version>
 	<name>microdiscovery</name>
 	<description>Miro micro-discovery server (eruka server) microservice project with Spring Boot</description>
