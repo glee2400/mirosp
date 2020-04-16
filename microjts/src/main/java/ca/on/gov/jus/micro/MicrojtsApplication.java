@@ -7,6 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
+import org.springframework.cloud.netflix.hystrix.EnableHystrix;
+import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
 import org.springframework.context.annotation.Bean;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.web.client.RestTemplate;
@@ -22,8 +24,15 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 /**
  * 
  * Micro JTS Spring API Project
- * Swagger2 is added as a annotation, however,
- * for a real project it will be in a configuration class 
+ * 1. Swagger2 is added as a annotation, however,
+ *    for a real project it will be in a configuration class 
+ * 2. Enable Eureka server for remote microservice invocation
+ * 3. Multi-thread time-out settings for server torellence
+ * 4. Circuit Break pattern for remote service response tuning 
+ * 5. Hystrix and Hystrix parameters for remote service response tuning
+ * 6. Hystrix dahsboard
+ * 7. Bulkhead pattern on multi-threads remote service responses tuning 
+ * 
  *
  */
 
@@ -31,6 +40,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @EnableSwagger2
 @EnableEurekaClient
 @EnableCircuitBreaker
+@EnableHystrix        
+@EnableHystrixDashboard
 public class MicrojtsApplication {
 	
 	/*
